@@ -18,3 +18,12 @@ export interface IComment {
   createdAt: string;
   updatedAt: string;
 }
+
+export interface IFeedback {
+  id?: string;
+  feedback: string;
+  image?: string;
+  name: string;
+  createdAt: string;
+  updatedAt: string;
+}

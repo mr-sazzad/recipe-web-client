@@ -4,3 +4,8 @@ export const breakpointColumnsObj = {
   850: 2,
   500: 1,
 };
+
+export const feedbackBreadPointObj = {
+  default: 2,
+  850: 1,
+};
