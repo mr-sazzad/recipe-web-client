@@ -1,4 +1,5 @@
 import DesktopSidebar from "@/components/Desktop-sidebar";
+import MobileFooter from "@/components/MobileFooter";
 import Navbar from "@/components/Navbar";
 import Wrapper from "@/components/Wrapper";
 import React from "react";
@@ -13,7 +14,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
       <Navbar />
       <Wrapper>
         <DesktopSidebar />
-        {/* <MobileFooter /> */}
+        <MobileFooter />
         <div className="lg:ml-[250px] p-5">{children}</div>
       </Wrapper>
     </div>

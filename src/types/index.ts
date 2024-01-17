@@ -1,3 +1,7 @@
+export interface IResponse {
+  data: any;
+}
+
 export interface IIngredient {
   label: string;
   value: string;
@@ -26,4 +30,10 @@ export interface IFeedback {
   name: string;
   createdAt: string;
   updatedAt: string;
+}
+
+export interface IRoute {
+  id: number;
+  label: string;
+  href: string;
 }
