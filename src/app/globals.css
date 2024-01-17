@@ -15,3 +15,7 @@ height: 100%;
 .website-name {
     font-family: 'Rubik Microbe', system-ui;
 }
+
+.dashboard-height {
+    height: calc(100vh - 115px);
+  }
