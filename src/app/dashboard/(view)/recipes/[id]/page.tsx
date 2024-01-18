@@ -49,7 +49,7 @@ const RecipeDetailsPage = () => {
     <div className="flex justify-center p-4 bg-white text-gray-800 mb-14 lg:mb-0">
       <div className="flex flex-col gap-5 max-w-4xl">
         <div className="flex justify-center w-full">
-          <div className="relative lg:h-[400px] lg:w-[600px] md:w-[450px] md:h-[300px] sm:w-[400px] sm:h-[300px] h-[250px] w-[400px]">
+          <div className="relative lg:h-[400px] lg:w-[600px] md:w-[450px] md:h-[300px] sm:w-[400px] sm:h-[300px] h-[180px] w-[300px]">
             <Image
               src={
                 recipe?.image ? recipe.image : "/assets/image-placeholder.png"
