@@ -25,7 +25,7 @@ const AllRecipes = () => {
   );
 
   return (
-    <div>
+    <div className="mb-14 lg:mb-0">
       <input
         type="text"
         placeholder="Search by title or ingredients"

@@ -108,7 +108,7 @@ const Feedback = () => {
 
   return (
     <>
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-5 mb-14 lg:mb-0">
         <div className="flex justify-end">
           <Button
             label="Add A Feedback"

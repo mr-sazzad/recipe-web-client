@@ -31,7 +31,8 @@ const RecipeDetailsPage = () => {
         toast.error("please enter a comment first!");
         return;
       }
-      const result: any = await createNewComment({ id, comment });
+      const requestedData = { recipeId: id, comment };
+      const result: any = await createNewComment(requestedData);
 
       if (result.success !== false) {
         toast.success("Comment added");
@@ -45,24 +46,28 @@ const RecipeDetailsPage = () => {
   const lastUpdated = new Date(recipe?.updatedAt).toDateString();
 
   return (
-    <div className="flex justify-center p-4 bg-white text-gray-800">
+    <div className="flex justify-center p-4 bg-white text-gray-800 mb-14 lg:mb-0">
       <div className="flex flex-col gap-5 max-w-4xl">
-        <div className="relative lg:h-[400px] lg:w-[600px] md:w-[450px] md:h-[300px] sm:w-[400px] sm:h-[300px] h-[250px] w-[400px]">
-          <Image
-            src={recipe?.image ? recipe.image : "/assets/image-placeholder.png"}
-            alt="recipe-image"
-            priority
-            className="rounded-lg shadow-md"
-            objectFit="cover"
-            layout="fill"
-          />
+        <div className="flex justify-center w-full">
+          <div className="relative lg:h-[400px] lg:w-[600px] md:w-[450px] md:h-[300px] sm:w-[400px] sm:h-[300px] h-[250px] w-[400px]">
+            <Image
+              src={
+                recipe?.image ? recipe.image : "/assets/image-placeholder.png"
+              }
+              alt="recipe-image"
+              priority
+              className="rounded-lg shadow-md"
+              objectFit="cover"
+              layout="fill"
+            />
+          </div>
         </div>
 
         <div>
           <h2 className="text-4xl font-semibold capitalize md:text-5xl">
             {recipe?.title}
           </h2>
-          <p className="text-sm text-gray-500">Posted on: {postedOn}</p>
+          <p className="text-sm text-gray-500 mt-1">Posted on: {postedOn}</p>
           {postedOn !== lastUpdated && (
             <p className="text-sm text-gray-500">Last Modify: {lastUpdated}</p>
           )}

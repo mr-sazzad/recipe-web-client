@@ -52,8 +52,10 @@ const RecipeCard = ({ recipe }: { recipe: IDBRecipe }) => {
 
     try {
       const result: any = await deleteSingleRecipe(recipe.id);
-      if (result.success !== false) {
-        toast.success("Recipe Deleted");
+      if (result.error) {
+        toast.error("something went wrong");
+      } else {
+        toast.success("recipe deleted");
       }
     } catch (err) {
       toast.error("something went wrong");
@@ -109,6 +111,7 @@ const RecipeCard = ({ recipe }: { recipe: IDBRecipe }) => {
       } else {
         toast.success("Recipe updated");
         setLoading(false);
+        setOpen(false);
       }
     } catch (err: any) {
       toast.error("Something went wrong");

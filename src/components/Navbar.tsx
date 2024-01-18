@@ -27,7 +27,7 @@ const Navbar = () => {
           ) : (
             <RecipeLink
               href="/dashboard"
-              label="Go To Dashboard"
+              label="Dashboard"
               icon={RxDashboard}
               outlined
               rounded

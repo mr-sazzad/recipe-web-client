@@ -15,7 +15,7 @@ const Logo: React.FC<LogoProps> = ({ subtitle }) => {
           height={50}
           width={50}
         />
-        <p className="md:text-2xl text-xl font-bold website-name bg-white text-neutral-900">
+        <p className="md:text-2xl text-xl font-bold website-name text-neutral-900">
           Recipe
         </p>
       </div>
